@@ -24,6 +24,8 @@ public class MyService extends Service {
 
     }
 
+
+
     @Override
     public void onStart(Intent intent, int startId) {
         super.onStart(intent, startId);
@@ -35,6 +37,9 @@ public class MyService extends Service {
         for (int i = 0 ; i<=counter;i++){
             Log.e(TAG, "counter: "+i );
         }
+
+        // send message
+        GlobalBus.getBus().post(new Event("working done", counter));
 
         stopSelf();
 

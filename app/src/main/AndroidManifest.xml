@@ -18,12 +18,15 @@
         </activity>
 
         <service android:name=".MyService"
+            android:enabled="true"
+
 
             >
-
         </service>
 
+        <activity android:name=".MySecoudActivity">
 
+        </activity>
     </application>
 
 </manifest>
